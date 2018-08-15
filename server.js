@@ -35,14 +35,14 @@ var app = express()
 //connect to DATABASE
 MongoClient.connect(url,{useNewUrlParser:true}, function(err, db){
   if(err) throw err
-  var dbOutput = db.db("sama")
+  var dbOutput = db.db("dashboard")
   app.get('/', function(req, res){
     if (err) throw err
-    dbOutput.collection("partnerSchools").find({}).limit(15).toArray(function(err, result){
+    dbOutput.collection("sama").find({}).limit(15).toArray(function(err, result){
       if(err) throw err;
       // console.log(result)
-      res.send(result)
-      // res.send(getData(result)[1].location)
+      // res.send(result)
+      res.send(getData(result))
       })
   })
 })
