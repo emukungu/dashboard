@@ -32,6 +32,11 @@ var url = "mongodb://localhost:27017/"
 //read from db and return values using api
 var express = require("express")
 var app = express()
+// var app = require('./app')
+// app.set('views', path.join(__dirname, 'views'));
+app.set('views', './views')
+app.set("view engine", "jade")
+
 //connect to DATABASE
 MongoClient.connect(url,{useNewUrlParser:true}, function(err, db){
   if(err) throw err
@@ -46,7 +51,7 @@ MongoClient.connect(url,{useNewUrlParser:true}, function(err, db){
       })
   })
 })
-app.use('./graph', express.static('graph'));
+app.use('/public', express.static('public'));
 
 app.get('/chart', function(req, res){
   res.render("chart")
