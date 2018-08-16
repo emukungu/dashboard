@@ -34,8 +34,8 @@ var express = require("express")
 var app = express()
 // var app = require('./app')
 // app.set('views', path.join(__dirname, 'views'));
-app.set('views', './views')
 app.set("view engine", "jade")
+app.set('views', './views')
 
 //connect to DATABASE
 MongoClient.connect(url,{useNewUrlParser:true}, function(err, db){
