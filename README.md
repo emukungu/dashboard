@@ -1,13 +1,11 @@
 # Dashboard
-This is a dashboard for tracking the progress of the various programs offered by Sama aimed to help make improvements based on the feedback reflected in the graghs.
-
+This is a dashboard for tracking the progress of the various programs offered by Sama aimed to help make improvements based on the feedback reflected in the graphs.
 
 ## Technologies Used
 * Node js
 * Express
 * Mongo database
 * jquery
-
 
 ## Setting up the project
 Clone repository from link below
